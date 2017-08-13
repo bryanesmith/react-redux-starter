@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 
 import { fetchWeather } from '../actions';
 
-class App extends React.Component {
+class WeatherJumbotron extends React.Component {
 
   constructor(props) {
     super(props);
   }
 
   componentWillMount() {
-    this.props.fetchWeather('washington, dc');
+    this.props.fetchWeather(this.props.place);
   }
 
   title() {
@@ -45,4 +45,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { fetchWeather })(App);
+export default connect(mapStateToProps, { fetchWeather })(WeatherJumbotron);

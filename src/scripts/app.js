@@ -1,7 +1,8 @@
 /*eslint-disable no-unused-vars*/
 import React from 'react';
-import App from './containers/App';
 import { Provider } from 'react-redux';
+import { HashRouter } from 'react-router-dom';
+import App from './components/App.jsx';
 /*eslint-enable no-unused-vars*/
 
 // lib
@@ -29,5 +30,7 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <HashRouter>
+      <App />
+    </HashRouter>
   </Provider>, root);
