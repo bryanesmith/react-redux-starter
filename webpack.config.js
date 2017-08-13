@@ -40,7 +40,10 @@ module.exports = {
         ]
         */
       },{
-        test: /\.(png|jpg|svg)$/,
+        test: /\.css$/,
+        loader: extractCSS.extract(['css-loader'])
+      },{
+        test: /\.(png|jpg|svg|eot|ttf|woff|woff2)$/,
         use: [{
           loader: 'url-loader',
           options: { limit: 10000 } // Convert images < 10k to base64 strings

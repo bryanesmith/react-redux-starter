@@ -7,6 +7,6 @@ import ReactDOM from 'react-dom';
 
 // assets
 import './styles/index.scss';
-
+import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render(<App />, document.getElementById('root'));
