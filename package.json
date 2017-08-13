@@ -10,7 +10,6 @@
     "build": "webpack -p"
   },
   "dependencies": {
-    "eslint-plugin-react": "^7.2.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
@@ -24,12 +23,14 @@
     "css-loader": "^0.28.4",
     "eslint": "^4.4.1",
     "eslint-loader": "^1.9.0",
+    "eslint-plugin-react": "^7.2.0",
+    "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.2",
     "node-sass": "^4.0.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
-    "webpack": "~2.7",
-    "webpack-dev-server": "^2.6"
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^2.7.0"
   }
 }
