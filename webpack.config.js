@@ -1,6 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
 
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const extractCSS = new ExtractTextPlugin('app.bundle.css')
+
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: './app.js',
@@ -27,11 +30,15 @@ module.exports = {
         ]
       },{
         test: /\.scss$/,
+        loader: extractCSS.extract(['css-loader', 'sass-loader'])
+        // To embed CSS in JS module, remove loader and add:
+        /*
         use: [
           'style-loader',
           'css-loader',
           'sass-loader'
         ]
+        */
       },{
         test: /\.(png|jpg|svg)$/,
         use: [{
@@ -40,5 +47,8 @@ module.exports = {
         }]
       }
     ]
-  }
+  }, // module
+  plugins: [
+    extractCSS
+  ]
 };
