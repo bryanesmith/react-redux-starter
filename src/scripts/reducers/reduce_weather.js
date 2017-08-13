@@ -1,4 +1,4 @@
-import { FETCH_WEATHER } from '../actions';
+import { REQUEST_WEATHER, RECEIVE_WEATHER } from '../actions';
 
 const INITIAL_STATE = { years: [] };
 
@@ -7,8 +7,9 @@ const INITIAL_STATE = { years: [] };
  */
 export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
-  case FETCH_WEATHER:
+  case RECEIVE_WEATHER:
     return { ...state, results: action.payload.query.results.channel };
+  case REQUEST_WEATHER:
   default:
     return INITIAL_STATE;
   }

@@ -6,17 +6,28 @@ import { Provider } from 'react-redux';
 
 // lib
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import { createLogger } from 'redux-logger';
 
 // custom
-import reducers from './reducers';
+import rootReducer from './reducers';
 
 // assets
 import '../styles/index.scss';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const root = document.getElementById('root');
+const loggerMiddleware = createLogger();
+const store = createStore(
+  rootReducer,
+  applyMiddleware(
+    thunkMiddleware,
+    loggerMiddleware
+  )
+);
+
 ReactDOM.render(
-  <Provider store={createStore(reducers)}>
+  <Provider store={store}>
     <App />
   </Provider>, root);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { fetchWeather } from '../actions/';
+import { fetchWeather } from '../actions';
 
 class App extends React.Component {
 
@@ -10,7 +10,7 @@ class App extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchWeather();
+    this.props.fetchWeather('washington, dc');
   }
 
   title() {
@@ -40,7 +40,6 @@ class App extends React.Component {
 }
 
 function mapStateToProps(state) {
-  console.dir(state);
   return {
     weather: state.weather.results
   };
