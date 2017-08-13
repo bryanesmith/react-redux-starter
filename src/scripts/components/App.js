@@ -1,6 +1,6 @@
 import React from 'react';
 
-const svgSample = 'http://thenewcode.com/assets/images/thumbnails/homer-simpson.svg';
+const svgSample = 'https://vignette2.wikia.nocookie.net/ssb/images/3/30/MarioSymbol.svg/revision/latest?cb=20150831014521';
 
 export default class App extends React.Component {
   render() {
@@ -10,7 +10,7 @@ export default class App extends React.Component {
           <img className="sample-svg" src={svgSample} />
         </div>
         <div className="col-sm-10">
-          <h1>Doh! <span className="glyphicon glyphicon-cutlery"/></h1>
+          <h1>Foo <span className="glyphicon glyphicon-cutlery"/></h1>
         </div>
       </div>
     );
