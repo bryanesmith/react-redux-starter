@@ -1,13 +1,12 @@
+/*eslint-disable no-unused-vars*/
+import React from 'react';
+import App from './scripts/components/App';
+/*eslint-enable no-unused-vars*/
+
+import ReactDOM from 'react-dom';
+
+// assets
 import './styles/index.scss';
 
-const svgSample = 'http://thenewcode.com/assets/images/thumbnails/homer-simpson.svg';
 
-// Adding text
-const root = document.querySelector('#root');
-root.innerHTML = 'foo';
-
-// Adding SVG
-const img = document.createElement('img');
-img.src = svgSample;
-img.classList.add('sample-svg');
-root.appendChild(img);
+ReactDOM.render(<App />, document.getElementById('root'));
