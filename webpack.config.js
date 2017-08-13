@@ -17,6 +17,12 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader'
+          },{
+            loader: 'eslint-loader',
+            options: {
+              failOnWarning: true,
+              failOnError: true
+            }
           }
         ]
       },{
